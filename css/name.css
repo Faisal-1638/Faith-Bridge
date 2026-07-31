@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0e1f1c;
+    color: #f5f5f0;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: #123028;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+    color: #d4af37;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #f5f5f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #d4af37;
+}
+
+/* ================= HERO ================= */
+
+.names-hero {
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+.names-hero h1 {
+    font-size: 40px;
+    color: #d4af37;
+    margin-bottom: 12px;
+}
+
+.names-hero p {
+    color: #c9c9c0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ================= SEARCH ================= */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#nameSearch {
+    width: 100%;
+    max-width: 420px;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #2c4a41;
+    background: #163830;
+    color: #f5f5f0;
+    font-size: 15px;
+    outline: none;
+}
+
+#nameSearch::placeholder {
+    color: #8fa89f;
+}
+
+/* ================= NAMES GRID ================= */
+
+.names-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+    padding: 20px 40px 60px;
+}
+
+.name-card {
+    background: #163830;
+    border: 1px solid #2c4a41;
+    border-radius: 14px;
+    padding: 20px 14px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.name-card:hover {
+    transform: translateY(-4px);
+    border-color: #d4af37;
+}
+
+.name-number {
+    font-size: 13px;
+    color: #8fa89f;
+    margin-bottom: 6px;
+}
+
+.name-arabic {
+    font-family: 'Amiri', serif;
+    font-size: 28px;
+    color: #d4af37;
+    margin-bottom: 8px;
+}
+
+.name-translit {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.name-meaning {
+    font-size: 13px;
+    color: #c9c9c0;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #123028;
+    color: #c9c9c0;
+}

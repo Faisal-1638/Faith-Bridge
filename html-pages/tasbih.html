@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tasbih Counter | Islamic Hub</title>
+
+<link rel="stylesheet" href="../css/tasbih.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="navbar">
+
+<div class="logo">
+☪ Islamic Hub
+</div>
+
+<ul class="nav-links">
+<li><a href="home.html">Home</a></li>
+<li><a class="active">Tasbih Counter</a></li>
+</ul>
+
+</nav>
+
+<section class="tasbih">
+
+<h1>Tasbih Counter</h1>
+
+<p>Remember Allah with every count.</p>
+
+<div class="counter-card">
+
+<div class="dhikr">
+
+<select id="dhikr">
+
+<option>SubhanAllah</option>
+
+<option>Alhamdulillah</option>
+
+<option>Allahu Akbar</option>
+
+<option>La ilaha illallah</option>
+
+<option>Astaghfirullah</option>
+
+</select>
+
+</div>
+
+<div class="counter" id="count">
+
+0
+
+</div>
+
+<div class="goal">
+
+Goal
+
+<span id="goalText">
+
+33
+
+</span>
+
+</div>
+
+<input
+type="range"
+id="goalSlider"
+min="33"
+max="1000"
+value="33"
+>
+
+<div class="buttons">
+
+<button id="undo">
+
+↩ Undo
+
+</button>
+
+<button id="reset">
+
+Reset
+
+</button>
+
+</div>
+
+<button id="countBtn">
+
+📿 Count
+
+</button>
+
+</div>
+
+</section>
+
+<script src="../js/tasbih.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,350 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*=========================================
+  VARIABLES (Theme System)
+=========================================*/
+:root {
+    --bg-main: #081B16;
+    --text-primary: #ffffff;
+    --text-muted: #d7d7d7;
+    --text-subtle: #c9c9c9;
+    --nav-bg: rgba(15, 76, 58, 0.85);
+    --primary: #0F4C3A;
+    --secondary: #123C30;
+    --quote-bg: #12352C;
+    --gold: #D4AF37;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.08);
+    --toggle-bg: rgba(255, 255, 255, 0.15);
+    --toggle-border: rgba(255, 255, 255, 0.2);
+    --toggle-hover: rgba(255, 255, 255, 0.25);
+    --hero-overlay: rgba(0, 0, 0, 0.55);
+}
+
+/* Light Theme Variables */
+body.light-mode {
+    --bg-main: #f4f6f8;
+    --text-primary: #1a202c;
+    --text-muted: #4a5568;
+    --text-subtle: #64748b;
+    --nav-bg: rgba(17, 94, 70, 0.95);
+    --primary: #115e46;
+    --secondary: #0d4735;
+    --quote-bg: #e2e8f0;
+    --gold: #dda821;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --toggle-bg: rgba(0, 0, 0, 0.1);
+    --toggle-border: rgba(0, 0, 0, 0.15);
+    --toggle-hover: rgba(0, 0, 0, 0.2);
+    --hero-overlay: rgba(0, 0, 0, 0.35);
+}
+
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/*=========================================
+  NAVBAR
+=========================================*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.active {
+    color: var(--gold) !important;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+    background: var(--toggle-bg);
+    border: 1px solid var(--toggle-border);
+    border-radius: 50px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background: var(--toggle-hover);
+}
+
+/*=========================================
+  HERO
+=========================================*/
+.hero {
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+                url("../images/mosque.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 58px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 750px;
+    color: #ddd;
+    margin: auto;
+}
+
+/*=========================================
+  INTRO
+=========================================*/
+.intro {
+    width: 90%;
+    max-width: 900px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 36px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.intro p {
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+/*=========================================
+  CARDS
+=========================================*/
+.pillars {
+    width: 90%;
+    max-width: 1300px;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 35px;
+    transition: transform 0.35s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-bottom: 5px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.card h4 {
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: var(--text-muted);
+    margin-bottom: 25px;
+    transition: color 0.3s ease;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--gold);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    transform: translateX(6px);
+}
+
+/*=========================================
+  QUOTE
+=========================================*/
+.quote {
+    width: 90%;
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    background: var(--quote-bg);
+    transition: background 0.3s ease;
+}
+
+.quote h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.quote p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.quote span {
+    color: var(--text-subtle);
+    transition: color 0.3s ease;
+}
+
+/*=========================================
+  FOOTER
+=========================================*/
+footer {
+    background: var(--primary);
+    text-align: center;
+    padding: 40px 20px;
+    transition: background 0.3s ease;
+}
+
+footer h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #ddd;
+    margin: 5px 0;
+}
+
+/*=========================================
+  RESPONSIVE
+=========================================*/
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 45vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .quote {
+        padding: 30px 20px;
+    }
+
+    .quote h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+}
