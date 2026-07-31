@@ -23,7 +23,7 @@ body.light-mode {
     --nav-bg: #115e46;
     --card-bg: #fffafa;
     --card-border: #e2e8f0;
-    --gold-accent: #b48a1d;
+    --gold-accent: #d4a223;
     --btn-text: #ffffff;
     --toggle-bg: rgba(0, 0, 0, 0.1);
     --toggle-border: rgba(0, 0, 0, 0.15);
@@ -65,7 +65,7 @@ nav {
 .logo {
     font-size: 26px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--gold-accent);
 }
 
 nav ul {
@@ -83,6 +83,11 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--gold-accent);
+}
+
+
+.active {
+    color: var(--gold-accent) !important;
 }
 
 #theme-toggle {
@@ -191,10 +196,8 @@ nav ul li a:hover {
 footer {
     text-align: center;
     padding: 30px;
-    background: var(--nav-bg);
-    color: #cccccc;
-    margin-top: auto;
-    transition: background 0.3s ease;
+    background: #123028;
+    color: #c9c9c0;
 }
 
 /* ================= MOBILE RESPONSIVE ================= */

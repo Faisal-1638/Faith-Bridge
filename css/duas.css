@@ -1,6 +1,18 @@
 /*=========================================
   VARIABLES (Theme System)
 =========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 :root {
     --bg-main: #081B16;
     --text-primary: #ffffff;
@@ -22,11 +34,11 @@
 body.light-mode {
     --bg-main: #f4f6f8;
     --text-primary: #1a202c;
-    --text-muted: #4a5568;
-    --text-subtle: #64748b;
+    --text-muted: #28303e;
+    --text-subtle: #3e4d61;
     --nav-bg: rgba(17, 94, 70, 0.95);
-    --gold: #b48a1d;
-    --gold-hover: #967114;
+    --gold: #e8af1d;
+    --gold-hover: #f1c500;
     --search-bg: #e2e8f0;
     --cat-bg: #e2e8f0;
     --card-bg: #ffffff;
@@ -301,4 +313,65 @@ body {
     .arabic {
         font-size: 28px;
     }
+
+    @media (max-width: 992px) {
+    .hero h1 {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        height: 45vh;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro h2 {
+        font-size: 28px;
+    }
+
+    .quote {
+        padding: 30px 20px;
+    }
+
+    .quote h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .icon {
+        font-size: 45px;
+    }
+}
 }
