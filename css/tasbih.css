@@ -27,6 +27,9 @@ html {
     --btn-bg-hover: #245746;
     --count-btn-bg: #edc645cd;
     --count-btn-text: #081B16;
+    --toggle-bg: rgba(0, 0, 0, 0.1);
+    --toggle-border: rgba(0, 0, 0, 0.15);
+    --toggle-hover: rgba(0, 0, 0, 0.2);
 }
 
 body.light-mode {
@@ -62,7 +65,7 @@ nav {
 .logo {
     font-size: 26px;
     font-weight: 700;
-    color: #fff;
+    color: var(--accent);
 }
 
 nav ul {

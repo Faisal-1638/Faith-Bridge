@@ -1,3 +1,8 @@
+/*=========================================
+  VARIABLES (Theme System)
+=========================================*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,140 +10,278 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background: #0e1f1c;
-    color: #f5f5f0;
+html {
+    scroll-behavior: smooth;
 }
 
-/* ================= NAVBAR ================= */
+:root {
+    --bg-main: #081B16;
+    --text-primary: #ffffff;
+    --text-muted: #d8d8d8;
+    --text-subtle: #afbed9;
+    --nav-bg: rgba(15, 76, 58, 0.85);
+    --gold: #D4AF37;
+    --gold-hover: #d1ac33;
+    --search-bg: #1a5542;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --border: rgba(255, 255, 255, 0.08);
+    --toggle-bg: rgba(255, 255, 255, 0.15);
+    --toggle-border: rgba(255, 255, 255, 0.2);
+    --toggle-hover: rgba(255, 255, 255, 0.25);
+}
 
+/* Light Mode Overrides */
+body.light-mode {
+    --bg-main: #f4f6f8;
+    --text-primary: #1a202c;
+    --text-muted: #28303e;
+    --text-subtle: #3e4d61;
+    --nav-bg: rgba(17, 94, 70, 0.95);
+    --gold: #e8af1d;
+    --gold-hover: #f1c500;
+    --search-bg: #e2e8f0;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --toggle-bg: rgba(0, 0, 0, 0.1);
+    --toggle-border: rgba(0, 0, 0, 0.15);
+    --toggle-hover: rgba(0, 0, 0, 0.2);
+}
+
+/*=========================================
+  GLOBAL BODY
+=========================================*/
+body {
+    background: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/*=========================================
+  NAVBAR
+=========================================*/
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
-    background: #123028;
+    padding: 18px 8%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(15px);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s ease, border-color 0.3s ease;
 }
 
 .logo {
-    font-size: 22px;
-    font-weight: 600;
-    color: #d4af37;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--gold);
 }
 
 .nav-links {
     display: flex;
+    gap: 30px;
     list-style: none;
-    gap: 24px;
+    align-items: center;
 }
 
 .nav-links a {
-    color: #f5f5f0;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    transition: 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: #d4af37;
+.nav-links a:hover {
+    color: var(--gold);
 }
 
-/* ================= HERO ================= */
+.active {
+    color: var(--gold) !important;
+}
 
+/* Theme Toggle Button */
+#theme-toggle {
+    background: var(--toggle-bg);
+    border: 1px solid var(--toggle-border);
+    border-radius: 50px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background: var(--toggle-hover);
+}
+
+/*=========================================
+  HERO
+=========================================*/
 .names-hero {
+    padding: 40px 20px 20px 20px;
     text-align: center;
-    padding: 60px 20px 30px;
 }
 
 .names-hero h1 {
-    font-size: 40px;
-    color: #d4af37;
-    margin-bottom: 12px;
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }
 
 .names-hero p {
-    color: #c9c9c0;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 700px;
+    margin: auto;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
 }
-
-/* ================= SEARCH ================= */
-
+main,
+.page-content {
+    flex: 1;
+}
+/*=========================================
+  SEARCH
+=========================================*/
 .search-section {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    margin: 40px 0;
 }
 
 #nameSearch {
-    width: 100%;
-    max-width: 420px;
-    padding: 12px 18px;
-    border-radius: 30px;
-    border: 1px solid #2c4a41;
-    background: #163830;
-    color: #f5f5f0;
-    font-size: 15px;
+    width: 90%;
+    max-width: 550px;
+    padding: 16px 22px;
+    border: 1px solid var(--border);
     outline: none;
+    border-radius: 50px;
+    background: var(--search-bg);
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 #nameSearch::placeholder {
-    color: #8fa89f;
+    color: var(--text-subtle);
 }
 
-/* ================= NAMES GRID ================= */
-
+/*=========================================
+  NAMES GRID
+=========================================*/
 .names-container {
+    width: 90%;
+    max-width: 1300px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 18px;
-    padding: 20px 40px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding-bottom: 80px;
 }
 
+/*=========================================
+  CARD
+=========================================*/
 .name-card {
-    background: #163830;
-    border: 1px solid #2c4a41;
-    border-radius: 14px;
-    padding: 20px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    backdrop-filter: blur(10px);
+    padding: 25px 14px;
+    border-radius: 20px;
     text-align: center;
-    transition: transform 0.2s, border-color 0.2s;
+    transition: transform 0.35s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .name-card:hover {
-    transform: translateY(-4px);
-    border-color: #d4af37;
+    transform: translateY(-8px);
+    border-color: var(--gold-hover);
 }
 
 .name-number {
     font-size: 13px;
-    color: #8fa89f;
+    color: var(--text-subtle);
     margin-bottom: 6px;
+    transition: color 0.3s ease;
 }
 
 .name-arabic {
     font-family: 'Amiri', serif;
-    font-size: 28px;
-    color: #d4af37;
-    margin-bottom: 8px;
+    font-size: 30px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 .name-translit {
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 600;
     margin-bottom: 4px;
+    color: var(--text-primary);
+    transition: color 0.3s ease;
 }
 
 .name-meaning {
     font-size: 13px;
-    color: #c9c9c0;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
 }
 
-/* ================= FOOTER ================= */
-
+/*=========================================
+  FOOTER
+=========================================*/
 footer {
     text-align: center;
     padding: 30px;
-    background: #123028;
-    color: #c9c9c0;
+    background: var(--nav-bg);
+    color: var(--text-muted);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/*=========================================
+  MOBILE
+=========================================*/
+@media(max-width: 768px) {
+    .names-hero h1 {
+        font-size: 38px;
+    }
+
+    .names-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    .name-arabic {
+        font-size: 24px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    .names-hero h1 {
+        font-size: 30px;
+    }
+
+    .name-card {
+        padding: 20px 12px;
+    }
 }

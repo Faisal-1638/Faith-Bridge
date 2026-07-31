@@ -148,8 +148,7 @@ nav ul li a:hover {
 }
 
 .hero button:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+    background-color: #e0ad21;
 }
 
 /* ================= CARDS ================= */

@@ -35,16 +35,16 @@ html {
 
 /* Light Theme Variables */
 body.light-mode {
-    --bg-main: #e8edef;
-    --text-primary: #1a202c;
-    --text-muted: #4a5568;
+    --bg-main: #e9eced;
+    --text-primary: #202029;
+    --text-muted: #0e0f10;
     --text-subtle: #64748b;
     --nav-bg: rgba(17, 94, 70, 0.95);
     --primary: #115e46;
     --secondary: #0d4735;
     --quote-bg: #e2e8f0;
     --gold: #dda821;
-    --card-bg: #ffffff;
+    --card-bg: #faf2f2dd;
     --border: #e2e8f0;
     --toggle-bg: rgba(0, 0, 0, 0.1);
     --toggle-border: rgba(0, 0, 0, 0.15);
@@ -196,7 +196,6 @@ body {
 
 .card:hover {
     border-color: var(--gold);
-    transform: translateY(-5px);
 }
 
 .icon {
