@@ -1,5 +1,5 @@
 // ================= PAGE NAVIGATION =================
-
+// Navigation Helper Function
 function goTo(page) {
     window.location.href = page;
 }
@@ -42,7 +42,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Navigation Helper Function
-function goTo(page) {
-    window.location.href = page;
-}

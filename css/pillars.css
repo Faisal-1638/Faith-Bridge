@@ -35,7 +35,7 @@ html {
 
 /* Light Theme Variables */
 body.light-mode {
-    --bg-main: #f4f6f8;
+    --bg-main: #e8edef;
     --text-primary: #1a202c;
     --text-muted: #4a5568;
     --text-subtle: #64748b;

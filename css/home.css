@@ -16,13 +16,13 @@
 
 /* Light Theme Variables */
 body.light-mode {
-    --bg-color: #f4f6f8;
+    --bg-color: #e8edef;
     --text-color: #1a202c;
     --text-muted: #4a5568;
     --card-text-muted: #4a5568;
     --nav-bg: #115e46;
     --card-bg: #fffafa;
-    --card-border: #e2e8f0;
+    --card-border: #cbf4dd;
     --gold-accent: #d4a223;
     --btn-text: #ffffff;
     --toggle-bg: rgba(0, 0, 0, 0.1);
@@ -173,7 +173,7 @@ nav ul li a:hover {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.10);
     border-color: var(--gold-accent);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }

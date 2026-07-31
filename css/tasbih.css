@@ -30,7 +30,7 @@ html {
 }
 
 body.light-mode {
-    --bg: #f5f0e6;
+    --bg: #f5f4f1;
     --nav-bg: #0F4C3A;
     --text: #1a1a1a;
     --text-muted: #555;
