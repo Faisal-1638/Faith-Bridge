@@ -148,7 +148,7 @@ nav ul li a:hover {
 }
 
 .hero button:hover {
-    background-color: #e0ad21;
+    background-color: #e3b431;
 }
 
 /* ================= CARDS ================= */
@@ -172,7 +172,7 @@ nav ul li a:hover {
 }
 
 .card:hover {
-    transform: scale(1.10);
+    transform: scale(1.08);
     border-color: var(--gold-accent);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
