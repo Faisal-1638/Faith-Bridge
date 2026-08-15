@@ -600,7 +600,7 @@ html {
 
         padding: 0;
 
-        background: var(--card-bg);
+        background: var(--bg-main);
 
         border: 1px solid var(--border-color);
 
@@ -615,6 +615,7 @@ html {
         box-shadow: var(--shadow-sm);
 
         z-index: 1001;
+         
     }
 
     .hamburger:active {
@@ -636,7 +637,7 @@ html {
 
         background: rgba(0, 0, 0, 0.45);
 
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(2px);
 
         opacity: 0;
 
@@ -664,9 +665,9 @@ html {
         top: 0;
         right: -100%;
 
-        width: min(50%, 320px);
+        width: min(60%, 320px);
 
-        height: 100vh;
+        height: 70vh;
 
         padding: 82px 22px 30px;
 

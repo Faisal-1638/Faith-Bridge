@@ -657,7 +657,7 @@
 
         background: rgba(0, 0, 0, 0.42);
 
-        backdrop-filter: blur(4px);
+        /* backdrop-filter: blur(2px); */
 
         opacity: 0;
 
@@ -688,7 +688,7 @@
 
         width: min(82%, 320px);
 
-        height: 100vh;
+        height: 70vh;
 
         padding: 82px 22px 30px;
 
