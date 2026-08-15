@@ -355,7 +355,78 @@
             {
                 font-size: 18px;
             }
+        
         }
+
+        @media (max-width: 768px) {
+
+    /* --- 1. Responsive Logo --- */
+    .logo {
+        font-size: 1.15rem; /* Prevents overlap on small screens */
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    /* --- 2. Responsive Hero Buttons --- */
+    .hero-buttons {
+        flex-direction: column; /* Stacks buttons vertically on mobile */
+        align-items: stretch;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px; /* Constrains button width for clean look */
+        margin: 0 auto 36px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    /* --- 3. Responsive Footer Text & Content --- */
+    .footer-desc {
+        max-width: 100%; /* Allows paragraph to use available width */
+        font-size: 0.88rem;
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .footer-heading {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0 16px;
+    }
+
+    .dua-text {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+}
+
+/* Extra breakpoint for ultra-small screens (360px and below) */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
 
          .footer {
             background-color: var(--card-bg);

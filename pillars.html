@@ -13,38 +13,48 @@
 
     <!-- Navigation Header -->
     <header>
-        <a href="index.html" class="logo">
-            <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
-            Faith-Bridge
-        </a>
+    <a href="index.html" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+        Faith-Bridge
+    </a>
 
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li class="nav-item">
-                    <a href="pillars.html" class="active-link">Pillars of Islam <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
-                    <div class="dropdown">
-                        <a href="javascript:void(0)" onclick="openPillarByName('shahada')">Shahada</a>
-                        <a href="javascript:void(0)" onclick="openPillarByName('salat')">Salat</a>
-                        <a href="javascript:void(0)" onclick="openPillarByName('sawm')">Sawm</a>
-                        <a href="javascript:void(0)" onclick="openPillarByName('zakat')">Zakat</a>
-                        <a href="javascript:void(0)" onclick="openPillarByName('hajj')">Hajj</a>
-                    </div>
-                </li>
-                <li><a href="dua.html">Daily Duas</a></li>
-                <li><a href="tasbih.html">Tasbih</a></li>
-                <li><a href="Quran.html">Quran</a></li>
-            </ul>
+    <!-- Hamburger Icon (Only element in top right header bar on mobile) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars"></i>
+    </button>
 
-            <div class="header-actions">
-                <button class="theme-toggle" id="themeToggle" title="থিম পরিবর্তন করুন">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-                <!-- <a href="#" class="btn btn-primary">শুরু করুন</a>
-                <a href="#" class="btn btn-secondary">কমিউনিটিতে যুক্ত হন</a> -->
-            </div>
-        </nav>
-    </header>
+    <!-- Overlay Backdrop -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Mobile Drawer Menu -->
+    <nav id="mobileNav">
+        <!-- Theme Toggle inside the Navigation Drawer -->
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="nav-item">
+                <a href="pillars.html" class="active-link" id="pillarsToggle">
+                    Pillars of Islam 
+                </a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" onclick="openPillarByName('shahada')">Shahada</a>
+                    <a href="javascript:void(0)" onclick="openPillarByName('salat')">Salat</a>
+                    <a href="javascript:void(0)" onclick="openPillarByName('sawm')">Sawm</a>
+                    <a href="javascript:void(0)" onclick="openPillarByName('zakat')">Zakat</a>
+                    <a href="javascript:void(0)" onclick="openPillarByName('hajj')">Hajj</a>
+                </div>
+            </li>
+            <li><a href="dua.html">Daily Duas</a></li>
+            <li><a href="tasbih.html">Tasbih</a></li>
+            <li><a href="Quran.html">Quran</a></li>
+        </ul>
+        <div class="drawer-header-action">
+            <button class="theme-toggle" id="themeToggle" title="Theme Change">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+</header>
 
     <!-- 5 Pillars Main Content Area -->
     <main class="pillars-section">
