@@ -14,6 +14,12 @@
 //         document.getElementById(pillarName).classList.add("active");
 //         evt.currentTarget.classList.add("active");
 //     }
+
+//Scroll
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
     const mobileNav = document.getElementById('mobileNav');
