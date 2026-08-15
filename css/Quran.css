@@ -43,17 +43,28 @@ html
             min-height: 100vh;
             display: flex;
             flex-direction: column;
+            margin-top: 90px;
         }
 
         /* --- Header & Navigation --- */
         header {
-            max-width: 1200px;
-            width: 90%;
-            margin: 0 auto;
-            padding: 24px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            /* Removed width: 100% and margin: 0 auto since top/left/right already stretches it fully */
+            padding: 18px 20px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            z-index: 1000;
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.107);
+            backdrop-filter: blur(12px);
+
         }
 
         .logo {
@@ -521,7 +532,6 @@ html
 
         gap: 10px !important;
 
-        position: relative;
     }
 
 
