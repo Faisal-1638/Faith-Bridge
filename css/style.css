@@ -458,7 +458,7 @@
 
         .dua-text {
             font-style: italic;
-            color: var(--primary-accent);
+            color: var(--text-secondary);
             font-weight: 500;
         }
 
@@ -473,7 +473,7 @@
             }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 768px) {
             .footer-container {
                 grid-template-columns: 1fr;
             }
@@ -485,6 +485,103 @@
                 gap: 8px;
                 text-align: center;
             }
+
+            
         }
 
+        /* --- Mobile Only Navigation (768px and below) --- */
+@media (max-width: 768px) {
+    /* Enable space between logo and menu button */
+    header {
+        position: relative;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        padding: 16px 20px !important;
+    }
+
+    /* Mobile Hamburger Icon */
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        cursor: pointer;
+        padding: 6px;
+        z-index: 1001;
+    }
+
+    /* Dark background overlay */
+    .nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Right-side Slide-out Drawer */
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hidden off-screen right */
+        width: 270px;
+        height: 100vh;
+        background-color: var(--card-bg);
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        padding: 80px 24px 30px;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.15);
+        transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        z-index: 1000;
+        gap: 28px !important;
+    }
+
+    nav.open {
+        right: 0; /* Slide in from right */
+    }
+
+    .nav-links {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100%;
+        gap: 16px !important;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem !important;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .header-actions {
+        width: 100%;
+        justify-content: flex-start;
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+    }
+}
+
+/* Hide hamburger and overlay on desktop screen sizes */
+@media (min-width: 769px) {
+    .hamburger, .nav-overlay {
+        display: none !important;
+    }
+}
         

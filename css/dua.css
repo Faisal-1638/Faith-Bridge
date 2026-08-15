@@ -437,7 +437,7 @@
 
         .dua-text {
             font-style: italic;
-            color: var(--primary-accent);
+            color: var(--text-secondary);
             font-weight: 500;
         }
 

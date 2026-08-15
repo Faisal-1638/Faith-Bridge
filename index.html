@@ -12,9 +12,8 @@
 </head>
 <body>
 
-    <!-- Header Section -->
+<!--    
     <header>
-        <!-- Logo -->
         <a href="#" class="logo">
             <div class="logo-icon">
                 <i class="fa-solid fa-mosque"></i>
@@ -22,19 +21,12 @@
             Faith-Bridge
         </a>
 
-        <!-- Navigation Bar -->
+        
         <nav>
             <ul class="nav-links">
                 <li><a class="active" href="#">Home</a></li>
                 <li class="nav-item">
                     <a href="pillars.html">Pillars of Islam </a>
-                    <!-- <div class="dropdown">
-                        <a href="#pillars" onclick="selectPillarTab('shahada')">Shahada</a>
-                        <a href="#pillars" onclick="selectPillarTab('salat')">Salat</a>
-                        <a href="#pillars" onclick="selectPillarTab('sawm')">Sawm</a>
-                        <a href="#pillars" onclick="selectPillarTab('zakat')">Zakat</a>
-                        <a href="#pillars" onclick="selectPillarTab('hajj')">Hajj</a>
-                    </div> -->
                 </li>
                 <li><a href="dua.html">Daily Duas</a></li>
                 <li><a href="tasbih.html">Tasbih</a></li>
@@ -42,17 +34,51 @@
             </ul>
 
             <div class="header-actions">
-                <!-- Theme Toggle Button -->
+               
                 <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
                     <i class="fa-solid fa-moon"></i>
                 </button>
                 
-                <!-- <a href="#" class="btn btn-primary">Get Started</a>
-                <a href="#" class="btn btn-secondary">Join Community</a> -->
             </div>
         </nav>
-    </header>
+    </header> -->
+<header>
+    <!-- Logo -->
+    <a href="#" class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-mosque"></i>
+        </div>
+        Faith-Bridge
+    </a>
 
+    <!-- Hamburger Button (Mobile Only) -->
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open Navigation">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Background Dim Layer -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Desktop Nav & Mobile Right Drawer -->
+    <nav id="mobileNav">
+        <ul class="nav-links">
+            <li><a class="active" href="#">Home</a></li>
+            <li class="nav-item">
+                <a href="pillars.html">Pillars of Islam</a>
+            </li>
+            <li><a href="dua.html">Daily Duas</a></li>
+            <li><a href="tasbih.html">Tasbih</a></li>
+            <li><a href="Quran.html">Quran</a></li>
+        </ul>
+
+        <div class="header-actions">
+            <!-- Theme Toggle Button -->
+            <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+</header>
     <!-- Main Hero Section -->
     <main>
         <section class="hero">
@@ -164,8 +190,8 @@
         <!-- Footer Bottom Bar -->
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p>&copy; 2026 Faith-Bridge. All rights reserved.</p>
-                <p class="dua-text">"Rabbi zidni 'ilma" (My Lord, increase me in knowledge)</p>
+                <p>&copy; 2026 <strong>Faith-Bridge</strong>. All rights reserved.</p>
+                <p class="dua-text">"রব্বি যিদনী 'ইলমা" (হে আমার প্রতিপালক, আমার জ্ঞান বৃদ্ধি করে দিন)</p>
             </div>
         </div>
     </footer>

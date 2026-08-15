@@ -450,7 +450,7 @@
 
         .dua-text {
             font-style: italic;
-            color: var(--primary-accent);
+            color: var(--text-secondary);
             font-weight: 500;
         }
 
@@ -469,7 +469,7 @@
 
         /* --- Dedicated Hadith Banner Style --- */
 .hadith-banner {
-    margin: 30px auto 20px;
+    margin: 30px auto 30px;
     padding: 24px 28px;
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
@@ -528,7 +528,7 @@
 @media (max-width: 768px) {
     .hadith-banner {
         padding: 18px 16px;
-        margin: 20px auto 0;
+        margin: 20px auto 20px;
     }
 
     .hadith-text {
