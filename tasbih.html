@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith-Bridge | ডিজিটাল তাসবিহ কাউন্টার</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/tasbih.css">
+</head>
+<body>
+
+    <!-- Header Section (অপরিবর্তিত রাখা হয়েছে) -->
+    <header>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+            Faith-Bridge
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pillars.html">Pillars of Islam</a></li>
+                <li><a href="dua.html">Daily Duas</a></li>
+                <li><a href="tasbih.html" class="active-link">Tasbih</a></li>
+                <li><a href="Quran.html">Quran</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Tasbih Counter Main Container -->
+    <main class="tasbih-section">
+        <div class="section-header">
+            <span class="section-tag">ডিজিটাল জিকির</span>
+            <h1>ইন্টারেক্টিভ তাসবিহ কাউন্টার</h1>
+        </div>
+
+        <!-- Preset Dhikr Selection -->
+        <div class="dhikr-presets">
+            <button class="preset-chip active" onclick="setDhikr('SubhanAllah', 'سُبْحَانَ اللَّهِ', 'আল্লাহ অতি পবিত্র', 33, this)">সুবহানাল্লাহ</button>
+            <button class="preset-chip" onclick="setDhikr('Alhamdulillah', 'الْحَمْدُ لِلَّهِ', 'সমস্ত প্রশংসা আল্লাহর জন্য', 33, this)">আলহামদুলিল্লাহ</button>
+            <button class="preset-chip" onclick="setDhikr('Allahu Akbar', 'اللَّهُ أَكْبَرُ', 'আল্লাহ মহান', 34, this)">আল্লাহু আকবার</button>
+            <button class="preset-chip" onclick="setDhikr('Astaghfirullah', 'أَسْتَغْفِرُ اللَّهَ', 'আমি আল্লাহর নিকট ক্ষমা প্রার্থনা করছি', 100, this)">আস্তাগফিরুল্লাহ</button>
+            <button class="preset-chip" onclick="setDhikr('La ilaha illallah', 'لَا إِلٰهَ إِلَّا اللَّهُ', 'আল্লাহ ছাড়া কোনো উপাস্য নেই', 100, this)">লা ইলাহা ইল্লাল্লাহ</button>
+        </div>
+
+        <!-- Active Dhikr Display -->
+        <div class="dhikr-display">
+            <div class="dhikr-arabic" id="arabicText">سُبْحَانَ اللَّهِ</div>
+            <div class="dhikr-translation" id="translationText">আল্লাহ অতি পবিত্র</div>
+        </div>
+
+        <!-- Main Counter Device -->
+        <div class="counter-card">
+            <div class="counter-top-bar">
+                <span class="target-selector">
+                    লক্ষ্যমাত্রা: 
+                    <button class="target-btn active" onclick="setTarget(33, this)">৩৩</button>
+                    <button class="target-btn" onclick="setTarget(100, this)">১০০</button>
+                    <button class="target-btn" onclick="setTarget(0, this)">∞</button>
+                </span>
+                <button class="control-btn" title="সাউন্ড চালু/বন্ধ" id="soundToggle" onclick="toggleSound()">
+                    <i class="fa-solid fa-volume-high"></i>
+                </button>
+            </div>
+
+            <div class="digital-screen">
+                <div class="screen-label">মোট গণনা</div>
+                <div class="count-number" id="countDisplay">০</div>
+                <div class="lap-info" id="lapDisplay">সম্পূর্ণ রাউন্ড: ০</div>
+            </div>
+
+            <!-- Tap Circle Button -->
+            <button class="tap-btn" id="tapBtn" onclick="incrementCount()">
+                <i class="fa-solid fa-fingerprint"></i>
+                <span>গণনা করুন</span>
+            </button>
+
+            <!-- Bottom Controls -->
+            <div class="counter-controls">
+                <button class="control-btn" onclick="resetCounter()">
+                    <i class="fa-solid fa-rotate-right"></i> Reset
+                </button>
+                <button class="control-btn" onclick="decrementCount()">
+                    <i class="fa-solid fa-minus"></i> Undo
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="brand-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+                    Faith-Bridge
+                </a>
+                <p class="footer-desc">
+                    ডিজিটাল ইসলামি টুলের মাধ্যমে দৈনন্দিন জিকির, স্মরণ ও আধ্যাত্মিক সচেতনতা বৃদ্ধি করা।
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="pillars.html">ইসলামের ৫টি স্তম্ভ</a></li>
+                    <li><a href="dua.html">দৈনন্দিন দোয়া</a></li>
+                    <li><a href="tasbih.html">তাসবিহ কাউন্টার</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Faith-Bridge</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; ২০২৬ Faith-Bridge। সর্বস্বত্ব সংরক্ষিত।</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Counter Logic -->
+    <script src="js/script.js"></script>
+    <script src="js/tasbih.js"></script>
+</body>
+</html>

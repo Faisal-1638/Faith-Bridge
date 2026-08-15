@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith-Bridge | Daily Duas & Supplications</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/dua.css">
+   
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+            Faith-Bridge
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pillars.html">Pillars of Islam</a></li>
+                <li><a href="dua.html" class="active-link">Daily Duas</a></li>
+                <li><a href="tasbih.html">Tasbih</a></li>
+                <li><a href="Quran.html">Quran</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#" class="btn btn-primary">Get Started</a>
+                <a href="#" class="btn btn-secondary">Join Community</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Daily Duas Content -->
+    <!-- Daily Duas Content -->
+<main class="duas-section">
+    <div class="section-header">
+        <span class="section-tag">মাসনুন জিকির ও মুনাজাত</span>
+        <h1>প্রাত্যহিক জীবনের প্রয়োজনীয় দোয়া</h1>
+        <p>রাসূলুল্লাহ (সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম)-এর সুন্নাহ হতে বর্ণিত সহীহ দোয়ার মাধ্যমে অন্তরের প্রশান্তি ও দৈনন্দিন নিরাপত্তা অর্জন করুন।</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="dua-categories">
+        <button class="cat-btn active" onclick="filterDuas('all', event)">সকল দোয়া</button>
+        <button class="cat-btn" onclick="filterDuas('morning', event)">সকাল ও সন্ধ্যার জিকির</button>
+        <button class="cat-btn" onclick="filterDuas('daily', event)">দৈনন্দিন জীবন</button>
+        <button class="cat-btn" onclick="filterDuas('prayer', event)">সালাত ও পবিত্রতা</button>
+        <button class="cat-btn" onclick="filterDuas('protection', event)">সুরক্ষা ও হেদায়েত</button>
+    </div>
+
+    <!-- Cards List -->
+    <div class="duas-grid" id="duasGrid">
+
+        <!-- Dua 1 -->
+        <div class="dua-card" data-category="morning">
+            <div class="dua-card-header">
+                <span class="dua-badge">সকাল ও সন্ধ্যার জিকির</span>
+                <div class="dua-actions">
+                    <button class="action-btn" title="দোয়া কপি করুন" onclick="copyDua(this)"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+            <h3 class="dua-title">ঘুম থেকে ওঠার দোয়া</h3>
+            <div class="arabic-dua">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</div>
+            <div class="transliteration">"আলহামদু লিল্লাহিল্লাযী আহইয়ানা বা'দা মা আমাতানা ওয়া ইলাইহিন-নুশূর।"</div>
+            <div class="translation">"সকল প্রশংসা আল্লাহর জন্য, যিনি আমাদের মৃত্যুর (ঘুমের) পর পুনরায় জীবিত করলেন এবং তাঁর দিকেই সবার পুনরুত্থান।"</div>
+            <div class="reference">সূত্র: সহীহ আল-বুখারী ৬৩১২</div>
+        </div>
+
+        <!-- Dua 2 -->
+        <div class="dua-card" data-category="daily">
+            <div class="dua-card-header">
+                <span class="dua-badge">দৈনন্দিন জীবন</span>
+                <div class="dua-actions">
+                    <button class="action-btn" title="দোয়া কপি করুন" onclick="copyDua(this)"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+            <h3 class="dua-title">খাবার খাওয়ার শুরুর দোয়া</h3>
+            <div class="arabic-dua">بِسْمِ اللَّهِ وَعَلَى بَرَكَةِ اللَّهِ</div>
+            <div class="transliteration">"বিসমিল্লাহি ওয়া 'আলা বারাকাতিল্লাহ।"</div>
+            <div class="translation">"আল্লাহর নামে এবং আল্লাহর বরকতের সাথে (খাওয়া শুরু করছি)।"</div>
+            <div class="reference">সূত্র: আল-হাকিম ১/৫২</div>
+        </div>
+
+        <!-- Dua 3 -->
+        <div class="dua-card" data-category="protection">
+            <div class="dua-card-header">
+                <span class="dua-badge">সুরক্ষা ও হেদায়েত</span>
+                <div class="dua-actions">
+                    <button class="action-btn" title="দোয়া কপি করুন" onclick="copyDua(this)"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+            <h3 class="dua-title">জ্ঞান বৃদ্ধির দোয়া</h3>
+            <div class="arabic-dua">رَّبِّ زِدْنِي عِلْمًا</div>
+            <div class="transliteration">"রব্বি যিদনী 'ইলমা।"</div>
+            <div class="translation">"হে আমার প্রতিপালক! আমার জ্ঞান বৃদ্ধি করে দিন।"</div>
+            <div class="reference">সূত্র: সূরা ত্বাহা (২০:১১৪)</div>
+        </div>
+
+        <!-- Dua 4 -->
+        <div class="dua-card" data-category="daily">
+            <div class="dua-card-header">
+                <span class="dua-badge">দৈনন্দিন জীবন</span>
+                <div class="dua-actions">
+                    <button class="action-btn" title="দোয়া কপি করুন" onclick="copyDua(this)"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+            <h3 class="dua-title">ঘর থেকে বের হওয়ার দোয়া</h3>
+            <div class="arabic-dua">بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ</div>
+            <div class="transliteration">"বিসমিল্লাহি তাওয়াক্কালতু 'আলাল্লাহি, ওয়া লা হাওলা ওয়া লা কুওয়াতা ইল্লা বিল্লাহ।"</div>
+            <div class="translation">"আল্লাহর নামে বের হচ্ছি, আল্লাহর ওপর ভরসা করলাম; আল্লাহর সাহায্য ছাড়া অমঙ্গল দূর করার বা মঙ্গল লাভের কোনো শক্তি নেই।"</div>
+            <div class="reference">সূত্র: আবু দাউদ ৫০৯৫</div>
+        </div>
+
+        <!-- Dua 5 -->
+        <div class="dua-card" data-category="prayer">
+            <div class="dua-card-header">
+                <span class="dua-badge">সালাত ও পবিত্রতা</span>
+                <div class="dua-actions">
+                    <button class="action-btn" title="দোয়া কপি করুন" onclick="copyDua(this)"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+            <h3 class="dua-title">ওজু শেষের দোয়া</h3>
+            <div class="arabic-dua">أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ</div>
+            <div class="transliteration">"আশহাদু আল-লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু, ওয়া আশহাদু আন্না মুহাম্মাদান 'আবদুহু ওয়া রাসূলুহু।"</div>
+            <div class="translation">"আমি সাক্ষ্য দিচ্ছি যে, এক আল্লাহ ছাড়া কোনো উপাস্য নেই, তাঁর কোনো অংশীদার নেই; এবং আমি আরও সাক্ষ্য দিচ্ছি যে, মুহাম্মাদ (সাঃ) তাঁর বান্দা ও রাসূল।"</div>
+            <div class="reference">সূত্র: সহীহ মুসলিম ২৩৪</div>
+        </div>
+
+    </div>
+</main>
+
+<!-- Copy Notification Toast -->
+<div class="toast" id="toast">দোয়াটি কপি করা হয়েছে!</div>
+
+    <!-- Copy Notification Toast -->
+    <div class="toast" id="toast">Dua copied to clipboard!</div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="brand-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+                    Faith-Bridge
+                </a>
+                <p class="footer-desc">
+                    A digital sanctuary dedicated to connecting Muslims worldwide, fostering spiritual growth, and providing accessible Islamic knowledge.
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">5 Pillars</h4>
+                <ul class="footer-links">
+                    <li><a href="pillars.html">Shahada (Faith)</a></li>
+                    <li><a href="pillars.html">Salat (Prayer)</a></li>
+                    <li><a href="pillars.html">Sawm (Fasting)</a></li>
+                    <li><a href="pillars.html">Zakat (Almsgiving)</a></li>
+                    <li><a href="pillars.html">Hajj (Pilgrimage)</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Features</h4>
+                <ul class="footer-links">
+                    <li><a href="Quran.html">Holy Quran</a></li>
+                    <li><a href="dua.html">Daily Duas & Supplications</a></li>
+                    <li><a href="tasbih.html">Interactive Tasbih Counter</a></li>
+                    <li><a href="time.html">Prayer Times & Qibla</a></li>
+                    <li><a href="#">Zakat Calculator</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Faith-Bridge</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Faith-Bridge. All rights reserved.</p>
+                <p class="dua-text">"Rabbi zidni 'ilma" (My Lord, increase me in knowledge)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/dua.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith-Bridge | The Holy Quran</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/Quran.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+            Faith-Bridge
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pillars.html">Pillars of Islam</a></li>
+                <li><a href="dua.html">Daily Duas</a></li>
+                <li><a href="tasbih.html">Tasbih</a></li>
+                <li><a href="Quran.html" class="active-link">Quran</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#" class="btn btn-primary">Get Started</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Quran Main Section -->
+    <!-- Quran Main Section -->
+<main class="quran-section">
+    <div class="section-header">
+        <span class="section-tag">পবিত্র ঐশী বাণী</span>
+        <h1>মহাগ্রন্থ আল-কুরআন</h1>
+        <p>মহান আল্লাহর প্রেরিত পবিত্র বাণী তিলাওয়াত করুন, অধ্যয়ন করুন এবং এর অন্তর্নিহিত হেদায়েত নিয়ে গভীরভাবে চিন্তাভাবনা করুন।</p>
+    </div>
+
+    <!-- Controls Bar -->
+    <!-- <div class="controls-container" id="controlsBar">
+        <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="searchInput" placeholder="সূরার নাম অথবা নম্বর লিখে খুঁজুন..." onkeyup="filterSurahs()">
+        </div>
+    </div> -->
+
+    <!-- Directory Grid View -->
+    <!-- <div class="surah-grid" id="surahGrid">
+        
+      
+        <div class="surah-card" onclick="openSurah(1, 'আল-ফাতিহা', 'সূচনা', '৭ আয়াত')">
+            <div class="surah-meta">
+                <div class="surah-number">১</div>
+                <div class="surah-details">
+                    <h3>আল-ফাতিহা</h3>
+                    <p>সূচনা • ৭ আয়াত</p>
+                </div>
+            </div>
+            <div class="surah-arabic-title" dir="rtl" lang="ar">الفاتحة</div>
+        </div>
+
+       
+        <div class="surah-card" onclick="openSurah(112, 'আল-ইখলাস', 'একত্ববাদ', '৪ আয়াত')">
+            <div class="surah-meta">
+                <div class="surah-number">১১২</div>
+                <div class="surah-details">
+                    <h3>আল-ইখলাস</h3>
+                    <p>একত্ববাদ • ৪ আয়াত</p>
+                </div>
+            </div>
+            <div class="surah-arabic-title" dir="rtl" lang="ar">الإخلاص</div>
+        </div>
+
+       
+        <div class="surah-card" onclick="openSurah(113, 'আল-ফালাক', 'ঊষা', '৫ আয়াত')">
+            <div class="surah-meta">
+                <div class="surah-number">১১৩</div>
+                <div class="surah-details">
+                    <h3>আল-ফালাক</h3>
+                    <p>ঊষা • ৫ আয়াত</p>
+                </div>
+            </div>
+            <div class="surah-arabic-title" dir="rtl" lang="ar">الفلق</div>
+        </div>
+
+        <div class="surah-card" onclick="openSurah(114, 'আন-নাস', 'মানবজাতি', '৬ আয়াত')">
+            <div class="surah-meta">
+                <div class="surah-number">১১৪</div>
+                <div class="surah-details">
+                    <h3>আন-নাস</h3>
+                    <p>মানবজাতি • ৬ আয়াত</p>
+                </div>
+            </div>
+            <div class="surah-arabic-title" dir="rtl" lang="ar">الناس</div>
+        </div>
+    </div> -->
+
+    <!-- Controls Bar -->
+<div class="controls-container" id="controlsBar">
+    <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="সূরার নাম (বাংলা/ইংরেজি) বা নম্বর দিয়ে খুঁজুন..." onkeyup="filterSurahs()">
+    </div>
+</div>
+
+<!-- Directory Grid View (এখানে ডাইনামিকালি ১১৪টি সূরা লোড হবে) -->
+<div class="surah-grid" id="surahGrid">
+    <div style="text-align: center; grid-column: 1/-1; padding: 2rem;">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <p style="margin-top: 1rem;">১১৪টি সূরার তালিকা লোড হচ্ছে...</p>
+    </div>
+</div>
+    <!-- Reader Display View (Hidden by default) -->
+    <div class="reader-view" id="readerView">
+        <div class="reader-header">
+            <button class="back-btn" onclick="closeReader()">
+                <i class="fa-solid fa-arrow-left"></i> সূচিপত্রে ফিরে যান
+            </button>
+            <div style="text-align: right;">
+                <h2 id="activeSurahTitle">আল-ফাতিহা</h2>
+                <span id="activeSurahMeta" style="font-size: 0.85rem; color: var(--text-secondary);">সূচনা • ৭ আয়াত</span>
+            </div>
+        </div>
+
+        <div class="bismillah" dir="rtl" lang="ar">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+
+        <div id="versesContainer">
+            <!-- Verses will be injected dynamically via JS -->
+        </div>
+    </div>
+</main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="brand-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+                    Faith-Bridge
+                </a>
+                <p class="footer-desc">
+                    "বিশুদ্ধ ইসলামিক জ্ঞান এবং বাস্তবমুখী ডিজিটাল প্রযুক্তির মাধ্যমে অন্তর ও মস্তিষ্কের সংযোগ স্থাপন।"
+                </p>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Features</h4>
+                <ul class="footer-links">
+                    <li><a href="pillars.html">5 Pillars of Islam</a></li>
+                    <li><a href="dua.html">Daily Duas</a></li>
+                    <li><a href="tasbih.html">Tasbih Counter</a></li>
+                    <li><a href="Quran.html">Holy Quran</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Faith-Bridge</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Faith-Bridge. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Reader & Filter Scripts -->
+    <script src="js/script.js" defer></script>
+    <script src="js/Quran.js" defer></script>
+</body>
+</html>

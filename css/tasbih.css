@@ -1,0 +1,432 @@
+ .html 
+ {
+    scroll-behavior: smooth;
+ }
+ :root {
+            /* Light Theme Palette */
+            --bg-main: #E8F7EE;
+            --card-bg: #FFFFFF;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --primary-accent: #34B382;
+            --primary-hover: #29936A;
+            --icon-bg-green: #D2F4E3;
+            --border-color: rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --shadow-lg: 0 20px 40px rgba(52, 179, 130, 0.15);
+        }
+
+        [data-theme="dark"] {
+            /* Dark Theme Palette */
+            --bg-main: #0B131F;
+            --card-bg: #152238;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --primary-accent: #34B382;
+            --primary-hover: #3ECA94;
+            --icon-bg-green: rgba(52, 179, 130, 0.15);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background-color: var(--primary-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active-link {
+            color: var(--primary-accent);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* --- Tasbih Main Layout --- */
+        .tasbih-section {
+            max-width: 900px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-accent);
+            letter-spacing: 1px;
+        }
+
+        .section-header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin: 6px 0;
+        }
+
+        /* Presets Selector */
+        .dhikr-presets {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 30px;
+            max-width: 700px;
+        }
+
+        .preset-chip {
+            background-color: var(--card-bg);
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .preset-chip:hover,
+        .preset-chip.active {
+            background-color: var(--primary-accent);
+            color: white;
+            border-color: var(--primary-accent);
+        }
+
+        /* Active Dhikr Display Banner */
+        .dhikr-display {
+            text-align: center;
+            margin-bottom: 24px;
+            min-height: 90px;
+        }
+
+        .dhikr-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+            margin-bottom: 4px;
+        }
+
+        .dhikr-translation {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+
+        /* Tasbih Counter Card */
+        .counter-card {
+            background-color: var(--card-bg);
+            border-radius: 32px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .counter-top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .target-selector {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .target-btn {
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 4px 10px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.8rem;
+        }
+
+        .target-btn.active {
+            background-color: var(--primary-accent);
+            color: white;
+            border-color: var(--primary-accent);
+        }
+
+        /* Digital Screen */
+        .digital-screen {
+            background-color: var(--bg-main);
+            border-radius: 20px;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+        }
+
+        .screen-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .count-number {
+            font-size: 4.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1;
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+
+        .lap-info {
+            font-size: 0.85rem;
+            color: var(--primary-accent);
+            font-weight: 700;
+            margin-top: 8px;
+        }
+
+        /* Interactive Counter Button */
+        .tap-btn {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-accent), var(--primary-hover));
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 12px 25px rgba(52, 179, 130, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .tap-btn:active {
+            transform: scale(0.92);
+            box-shadow: 0 5px 12px rgba(52, 179, 130, 0.3);
+        }
+
+        .tap-btn i {
+            font-size: 1.8rem;
+        }
+
+        /* Bottom Controls */
+        .counter-controls {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            border-radius: 12px;
+        }
+
+        .control-btn:hover {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+        }
+
+        /* --- Footer Styles --- */
+        .footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+            padding-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 12px;
+            max-width: 320px;
+        }
+
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding: 16px 0;
+            background-color: rgba(0, 0, 0, 0.02);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 16px; }
+            .footer-container { grid-template-columns: 1fr; }
+        }

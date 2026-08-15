@@ -1,0 +1,466 @@
+:root {
+            /* Light Theme Palette */
+            --bg-main: #E8F7EE;
+            --card-bg: #FFFFFF;
+            --text-primary: #0F172A;
+            --text-secondary: #475569;
+            --primary-accent: #34B382;
+            --primary-hover: #29936A;
+            --icon-bg-green: #D2F4E3;
+            --border-color: rgba(0, 0, 0, 0.05);
+            --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.04);
+            --dropdown-bg: #FFFFFF;
+        }
+
+        [data-theme="dark"] {
+            /* Dark Theme Palette */
+            --bg-main: #0B131F;
+            --card-bg: #152238;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --primary-accent: #34B382;
+            --primary-hover: #3ECA94;
+            --icon-bg-green: rgba(52, 179, 130, 0.15);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --shadow-sm: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --dropdown-bg: #1E293B;
+        }
+.html
+{
+    scroll-behavior: smooth;
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            background-color: var(--primary-accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active-link {
+            color: var(--primary-accent);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--text-primary);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .btn {
+            padding: 10px 22px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* --- Quran Page Layout --- */
+        .quran-section {
+            max-width: 1050px;
+            margin: 30px auto 80px;
+            padding: 0 20px;
+            flex: 1;
+            width: 100%;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .section-tag {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--primary-accent);
+            letter-spacing: 1px;
+        }
+
+        .section-header h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            margin: 6px 0;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* Search & Filter Controls */
+        .controls-container {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 280px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            outline: none;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+
+        /* View Mode Switcher (Grid / Reader View) */
+        .view-tabs {
+            display: flex;
+            gap: 8px;
+            background-color: var(--card-bg);
+            padding: 4px;
+            border-radius: 50px;
+            border: 1px solid var(--border-color);
+        }
+
+        .view-btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            border: none;
+            background: none;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .view-btn.active {
+            background-color: var(--primary-accent);
+            color: white;
+        }
+
+        /* Surah Cards Grid */
+        .surah-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 20px;
+        }
+
+        .surah-card {
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .surah-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-accent);
+        }
+
+        .surah-meta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .surah-number {
+            width: 42px;
+            height: 42px;
+            background-color: var(--icon-bg-green);
+            color: var(--primary-accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.95rem;
+        }
+
+        .surah-details h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .surah-details p {
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+        }
+
+        .surah-arabic-title {
+            font-family: 'Amiri', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-accent);
+        }
+
+        /* Reader View Area */
+        .reader-view {
+            display: none;
+            background-color: var(--card-bg);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+        }
+
+        .reader-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            background: var(--bg-main);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.88rem;
+        }
+
+        .bismillah {
+            text-align: center;
+            font-family: 'Amiri', serif;
+            font-size: 2.2rem;
+            color: var(--primary-accent);
+            margin: 20px 0 35px;
+        }
+
+        .verse-item {
+            padding: 24px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .verse-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .verse-badge {
+            background-color: var(--icon-bg-green);
+            color: var(--primary-accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .verse-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .v-action-btn {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .v-action-btn:hover {
+            color: var(--primary-accent);
+        }
+
+        .arabic-verse {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 2.3;
+            text-align: right;
+            direction: rtl;
+            color: var(--text-primary);
+        }
+
+        .verse-transliteration {
+            font-style: italic;
+            color: var(--primary-accent);
+            font-size: 0.95rem;
+        }
+
+        .verse-translation {
+            color: var(--text-secondary);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* --- Footer Styles --- */
+        .footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: auto;
+            padding-top: 40px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 30px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-desc {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-top: 12px;
+            max-width: 320px;
+        }
+
+        .footer-heading {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding: 16px 0;
+            background-color: rgba(0, 0, 0, 0.02);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 16px; }
+            .footer-container { grid-template-columns: 1fr; }
+            .reader-view { padding: 20px; }
+            .arabic-verse { font-size: 1.6rem; }
+        }

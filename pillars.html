@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith-Bridge | 5 Pillars of Islam</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/pillars.css">
+</head>
+<body>
+
+    <!-- Navigation Header -->
+    <header>
+        <a href="index.html" class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+            Faith-Bridge
+        </a>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="nav-item">
+                    <a href="pillars.html" class="active-link">Pillars of Islam <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem;"></i></a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0)" onclick="openPillarByName('shahada')">Shahada</a>
+                        <a href="javascript:void(0)" onclick="openPillarByName('salat')">Salat</a>
+                        <a href="javascript:void(0)" onclick="openPillarByName('sawm')">Sawm</a>
+                        <a href="javascript:void(0)" onclick="openPillarByName('zakat')">Zakat</a>
+                        <a href="javascript:void(0)" onclick="openPillarByName('hajj')">Hajj</a>
+                    </div>
+                </li>
+                <li><a href="dua.html">Daily Duas</a></li>
+                <li><a href="tasbih.html">Tasbih</a></li>
+                <li><a href="Quran.html">Quran</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="থিম পরিবর্তন করুন">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <!-- <a href="#" class="btn btn-primary">শুরু করুন</a>
+                <a href="#" class="btn btn-secondary">কমিউনিটিতে যুক্ত হন</a> -->
+            </div>
+        </nav>
+    </header>
+
+    <!-- 5 Pillars Main Content Area -->
+    <main class="pillars-section">
+        <div class="section-header">
+            <span class="section-tag">ইসলামের মূল ভিত্তি</span>
+            <h1>ইসলামের ৫টি মহান রুকন</h1>
+            <p>একজন মুমিনের প্রাত্যহিক জীবন ও ঈমানি ভিত্তিকে সুদৃঢ় করার জন্য আবশ্যকীয় ইবাদতসমূহ।</p>
+        </div>
+
+        <!-- Interactive Pillar Tabs -->
+        <div class="pillar-tabs">
+            <button class="tab-btn active" onclick="openPillar(event, 'shahada')">১. শাহাদাহ</button>
+            <button class="tab-btn" onclick="openPillar(event, 'salat')">২. সালাত</button>
+            <button class="tab-btn" onclick="openPillar(event, 'zakat')">৩. যাকাত</button>
+            <button class="tab-btn" onclick="openPillar(event, 'sawm')">৪. সাওম</button>
+            <button class="tab-btn" onclick="openPillar(event, 'hajj')">৫. হজ</button>
+        </div>
+
+        <!-- Tab Contents -->
+        <div class="pillar-content-wrapper">
+            
+            <!-- 1. Shahada -->
+            <div id="shahada" class="pillar-tab-content active">
+                <div class="pillar-card">
+                    <div class="pillar-info">
+                        <div class="pillar-badge"><i class="fa-solid fa-star-and-crescent"></i></div>
+                        <h2>শাহাদাহ <span>(ঈমানের ঘোষণা)</span></h2>
+                        <div class="arabic-text">أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا ٱللَّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا رَسُولُ ٱللَّٰهِ</div>
+                        <p class="translation">"আমি সাক্ষ্য দিচ্ছি যে, আল্লাহ ছাড়া কোনো উপাস্য নেই এবং আমি আরও সাক্ষ্য দিচ্ছি যে, মুহাম্মাদ (সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম) আল্লাহর বান্দা ও রাসূল।"</p>
+                        <p class="pillar-desc">ইসলামের প্রথম ও প্রধান ভিত্তি। এটি একমাত্র মহান আল্লাহর একত্ববাদ (তাওহীদ)-এর ওপর খাঁটি বিশ্বাস এবং হযরত মুহাম্মাদ (সাঃ)-কে শেষ রাসুল হিসেবে মেনে নেওয়ার চূড়ান্ত স্বীকৃতি।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Salat -->
+            <div id="salat" class="pillar-tab-content">
+                <div class="pillar-card">
+                    <div class="pillar-info">
+                        <div class="pillar-badge"><i class="fa-solid fa-person-praying"></i></div>
+                        <h2>সালাত <span>(দৈনিক পাঁচ ওয়াক্ত নামাজ)</span></h2>
+                        <p class="pillar-desc">ক্বিবলামুখী (মক্কার পবিত্র কাবা শরীফ) হয়ে দৈনিক ৫ ওয়াক্ত ফরজ সালাত আদায় করা। সালাত সারাদিনের কর্মব্যস্ততার মাঝে বান্দার সাথে মহান আল্লাহর সরাসরি আত্মিক সম্পর্ক স্থাপন করে।</p>
+                        <div class="salat-grid">
+                            <div class="salat-time"><span>ফজর</span> ভোরের সালাত</div>
+                            <div class="salat-time"><span>জুহর</span> দুপুরের সালাত</div>
+                            <div class="salat-time"><span>আসর</span> বিকেলের সালাত</div>
+                            <div class="salat-time"><span>মাগরিব</span> সূর্যাস্তকালীন সালাত</div>
+                            <div class="salat-time"><span>এশা</span> রাতের সালাত</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Zakat -->
+            <div id="zakat" class="pillar-tab-content">
+                <div class="pillar-card">
+                    <div class="pillar-info">
+                        <div class="pillar-badge"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h2>যাকাত <span>(নির্ধারিত দান)</span></h2>
+                        <p class="pillar-desc">সম্পদের পবিত্রতা অর্জন এবং অসচ্ছল মানুষের সহায়তার লক্ষ্যে নিসাব পরিমাণ সম্পদের মালিক প্রাপ্তবয়স্ক মুসলিমদের জন্য বছরান্তে ২.৫% হারে নির্ধারিত যাকাত প্রদান করা বাধ্যতামূলক।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Sawm -->
+            <div id="sawm" class="pillar-tab-content">
+                <div class="pillar-card">
+                    <div class="pillar-info">
+                        <div class="pillar-badge"><i class="fa-solid fa-moon"></i></div>
+                        <h2>সাওম <span>(রমাদানের সিয়াম/রোজা)</span></h2>
+                        <p class="pillar-desc">পবিত্র রমাদান মাসে সুবহে সাদিক থেকে সূর্যাস্ত পর্যন্ত সকল প্রকার পানাহার ও পাপাচার থেকে বিরত থাকা। এটি তাকওয়া (আল্লাহভীতি), আত্মসংযম ও সহানুভূতি অর্জনের অন্যতম মাধ্যম।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5. Hajj -->
+            <div id="hajj" class="pillar-tab-content">
+                <div class="pillar-card">
+                    <div class="pillar-info">
+                        <div class="pillar-badge"><i class="fa-solid fa-kaaba"></i></div>
+                        <h2>হজ <span>(পবিত্র তীর্থযাত্রা)</span></h2>
+                        <p class="pillar-desc">শারীরিক ও মানসিকভাবে সামর্থ্যবান প্রতিটি মুসলিমের জন্য জীবনে অন্তত একবার জিলহজ মাসে পবিত্র নগরী মক্কায় গিয়ে নির্দিষ্ট নিয়মকানুনের মাধ্যমে হজ পালন করা ফরজ।</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="brand-col">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon"><i class="fa-solid fa-mosque"></i></div>
+                    Faith-Bridge
+                </a>
+                <p class="footer-desc">
+                    বিশ্বজুড়ে মুসলিম উম্মাহকে এক সুতোয় গাঁথা, আত্মিক বিকাশ ঘটানো এবং সহজের মধ্যে সঠিক দ্বীনি জ্ঞান পৌঁছে দেওয়ার একটি বিশ্বস্ত ডিজিটাল প্ল্যাটফর্ম।
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">ইসলামের ৫ রুকন</h4>
+                <ul class="footer-links">
+                    <li><a href="javascript:void(0)" onclick="openPillarByName('shahada')">Shahada (Faith)</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPillarByName('salat')">Salat (Prayer)</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPillarByName('sawm')">Sawm (Fasting)</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPillarByName('zakat')">Zakat (Almsgiving)</a></li>
+                    <li><a href="javascript:void(0)" onclick="openPillarByName('hajj')">Hajj (Pilgrimage)</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Features</h4>
+                <ul class="footer-links">
+                    <li><a href="Quran.html">আল-কুরআন</a></li>
+                    <li><a href="dua.html">দৈনন্দিন জিকির ও দোয়া</a></li>
+                    <li><a href="tasbih.html">ডিজিটাল তাসবিহ কাউন্টার</a></li>
+                    <li><a href="time.html">সালাতের সময়সূচি ও কিবলা</a></li>
+                    <li><a href="#">যাকাত ক্যালকুলেটর</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="footer-heading">Community</h4>
+                <ul class="footer-links">
+                    <li><a href="#">About Faith-Bridge</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p>&copy; 2026 Faith-Bridge. All rights reserved.</p>
+                <p class="dua-text">"রব্বি যিদনী 'ইলমা" (হে আমার প্রতিপালক, আমার জ্ঞান বৃদ্ধি করে দিন)"</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/pillars.js"></script>
+</body>
+</html>
