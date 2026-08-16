@@ -607,41 +607,65 @@
     /* =====================================================
        HAMBURGER
        ===================================================== */
+.hamburger {
+    display: flex !important;
 
-    .hamburger {
-        display: flex !important;
+    width: 42px;
+    height: 42px;
 
-        width: 42px;
-        height: 42px;
+    align-items: center;
+    justify-content: center;
 
-        align-items: center;
-        justify-content: center;
+    margin-left: auto;
 
-        margin-left: auto;
+    padding: 0;
 
-        padding: 0;
+    background: var(--bg-main);
 
-        background: var(--card-bg);
+    border: 1px solid var(--border-color);
 
-        color: var(--text-primary);
+    border-radius: 10px;
 
-        border: 1px solid var(--border-color);
+    color: var(--text-primary);
 
-        border-radius: 10px;
+    font-size: 1.25rem;
 
-        font-size: 1.2rem;
+    cursor: pointer;
 
-        cursor: pointer;
+    box-shadow: var(--shadow-sm);
 
-        box-shadow: var(--shadow-sm);
+    z-index: 1001;
 
-        z-index: 1001;
+    /* --- Smooth Mobile Enhancements --- */
+    
+    /* Removes tap highlight box on iOS/Android */
+    -webkit-tap-highlight-color: transparent; 
+
+    /* Removes 300ms tap delay on mobile devices */
+    touch-action: manipulation; 
+
+    /* Enables smooth hardware-accelerated transitions */
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+    
+    will-change: transform;
+}
+
+/* Hover effect (primarily for devices with fine pointers/mice) */
+@media (hover: hover) {
+    .hamburger:hover {
+        background: var(--bg-hover, var(--bg-main));
+        transform: translateY(-1px);
     }
+}
 
-    .hamburger:active {
-        transform: scale(0.94);
-    }
-
+/* Active state for press/touch */
+.hamburger:active {
+    transform: scale(0.92);
+    box-shadow: none;
+    transition-duration: 0.08s; /* Faster response on press-down */
+}
 
     /* =====================================================
        OVERLAY
@@ -655,7 +679,7 @@
         width: 100vw;
         height: 100vh;
 
-        background: rgba(0, 0, 0, 0.42);
+        background: rgba(0, 0, 0, 0.45);
 
         /* backdrop-filter: blur(2px); */
 
@@ -686,7 +710,7 @@
 
         right: -100%;
 
-        width: min(82%, 320px);
+        width: min(60%, 320px);
 
         height: 70vh;
 
@@ -704,7 +728,7 @@
 
         gap: 24px !important;
 
-        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.18);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
 
         overflow-y: auto;
 
