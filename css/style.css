@@ -388,8 +388,130 @@ html {
         }
 
 
+        /* Overall Footer Container */
+.footer {
+    background-color: #03140d;
+    color: #ffffff;
+    padding-top: 60px;
+    margin-top: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Footer Main Grid Layout */
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* Brand Section Styles */
+.brand-col .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+.footer-desc {
+    color: #a3b8b0; /* Light muted greenish-gray font color */
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 300px;
+}
+
+/* Headings ("Company", "Legal", "Follow Us", etc.) */
+.footer-heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Navigation Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links a {
+    color: #a3b8b0; /* Light muted text color */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--primary-accent); /* Turns clean white on hover */
+}
+
+/* Social Icons (Dark Circular Badges) */
+.social-links {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bg-main); /* Slightly lighter dark green badge background */
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--primary-accent);
+}
+
+/* App Store & Google Play Badges Container */
+.app-badges {
+    display: flex;
+    gap: 10px;
+}
+
+.app-badges img {
+    height: 40px;
+    border-radius: 6px;
+}
+
+/* Bottom Footer Bar */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtle border line */
+    padding: 24px 0;
+}
+
+.footer-bottom-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a3b8b0;
+}
+
+[data-theme="dark"] .footer {
+            background-color: rgba(0, 0, 0, 0.13);
+        }
+/* 
          .footer {
-            background-color: var(--card-bg);
+            background-color: rgb(14, 20, 16);
             border-top: 1px solid var(--border-color);
             margin-top: auto;
             padding-top: 50px;
@@ -409,7 +531,7 @@ html {
         }
 
         .footer-desc {
-            color: var(--text-secondary);
+            color: var(--dropdown-bg);
             font-size: 0.9rem;
             line-height: 1.6;
             margin-bottom: 20px;
@@ -418,7 +540,7 @@ html {
 
         .social-links {
             display: flex;
-            gap: 12px;
+            gap: 15px;
         }
 
         .social-links a {
@@ -438,13 +560,12 @@ html {
         .social-links a:hover {
             background-color: var(--primary-accent);
             color: #ffffff;
-            transform: translateY(-2px);
         }
 
         .footer-heading {
             font-size: 1rem;
             font-weight: 700;
-            color: var(--text-primary);
+            color: var(--dropdown-bg);
             margin-bottom: 20px;
         }
 
@@ -456,7 +577,7 @@ html {
         }
 
         .footer-links a {
-            color: var(--text-secondary);
+            color: rgba(234, 229, 229, 0.916);
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.2s ease;
@@ -467,7 +588,7 @@ html {
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid rgba(65, 62, 62, 0.452);
             padding: 20px 0;
             background-color: rgba(0, 0, 0, 0.02);
         }
@@ -485,7 +606,7 @@ html {
             align-items: center;
             font-size: 0.85rem;
             color: var(--text-secondary);
-        }
+        } */
 
         .dua-text {
             font-style: italic;
@@ -715,6 +836,7 @@ html {
             right 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
 
         z-index: 1000;
+        
     }
 
     nav.open {
