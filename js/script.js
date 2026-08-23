@@ -1,23 +1,3 @@
-// function openPillar(evt, pillarName) {
-//         let i, tabcontent, tablinks;
-        
-//         tabcontent = document.getElementsByClassName("pillar-tab-content");
-//         for (i = 0; i < tabcontent.length; i++) {
-//             tabcontent[i].classList.remove("active");
-//         }
-
-//         tablinks = document.getElementsByClassName("tab-btn");
-//         for (i = 0; i < tablinks.length; i++) {
-//             tablinks[i].classList.remove("active");
-//         }
-
-//         document.getElementById(pillarName).classList.add("active");
-//         evt.currentTarget.classList.add("active");
-//     }
-
-//lang toggle
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerBtn = document.getElementById('hamburgerBtn');
@@ -49,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
 function goTo(page) {
     window.location.href = page;
 }

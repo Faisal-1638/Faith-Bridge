@@ -105,7 +105,7 @@ html {
             z-index: 1000;
 
             border-bottom: 1px solid rgba(0, 0, 0, 0.107);
-             border-top: 2px solid rgba(0, 0, 0, 0.107);
+            border-top: 2px solid rgba(0, 0, 0, 0.107);
             backdrop-filter: blur(12px);
            
         }

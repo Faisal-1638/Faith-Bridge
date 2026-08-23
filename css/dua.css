@@ -897,27 +897,18 @@ html
 
     .dua-categories {
         width: 100%;
-
         display: flex;
-
         justify-content: center;
-
         align-items: center;
-
         flex-wrap: wrap;
-
         gap: 8px;
-
         margin-bottom: 28px;
     }
 
     .cat-btn {
         padding: 9px 16px;
-
         font-size: 0.82rem;
-
         white-space: nowrap;
-
         box-shadow: none;
     }
 

@@ -981,14 +981,10 @@
        ===================================================== */
 .pillar-tabs {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     flex-wrap: wrap;
-
     gap: 9px;
-
     margin-bottom: 22px;
 }
 
