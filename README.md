@@ -1,6 +1,6 @@
 # Faith-Bridge
 
-    Connecting hearts with faith and minds with knowledge.
+Connecting hearts with faith and minds with knowledge.
 
 Welcome to **Faith-Bridge** —a simple Islamic website created to help Muslims learn and understand the basic and fundamental teachings of Islam in an accessible and user-friendly way.
 
@@ -14,11 +14,11 @@ Faith-Bridge is designed as a starting point for anyone who wants to learn more 
 
 The project aims to:
 
-    -Make basic Islamic knowledge easier to learn
-    -Help Muslims understand the fundamental teachings of Islam
-    -Provide useful resources for everyday worship
-    -Encourage Muslims to remember Allah and strengthen their faith
-    -Make Islamic learning simple and accessible to everyone
+Make basic Islamic knowledge easier to learn
+Help Muslims understand the fundamental teachings of Islam
+Provide useful resources for everyday worship
+Encourage Muslims to remember Allah and strengthen their faith
+Make Islamic learning simple and accessible to everyone
 
 ## Features
 
