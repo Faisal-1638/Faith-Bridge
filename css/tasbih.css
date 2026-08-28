@@ -461,6 +461,8 @@
     background-color: var(--primary-accent);
 }
 
+
+
 /* App Store & Google Play Badges Container */
 .app-badges {
     display: flex;

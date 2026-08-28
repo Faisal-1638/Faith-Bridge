@@ -24,7 +24,6 @@ html {
     background: var(--primary-hover);
 }
 :root {
-            /* Light Theme Palette (Matches Image) */
             --bg-main: #E8F7EE;
             --card-bg: #FFFFFF;
             --text-primary: #0F172A;
@@ -91,14 +90,15 @@ html {
    ================================ */
         header {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            /* Removed width: 100% and margin: 0 auto since top/left/right already stretches it fully */
-            padding: 18px 20px;
+            top: 0px;
+            left: 0px;
+            right: 0px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            /* Removed width: 100% and margin: 0 auto since top/left/right already stretches it fully */
+            padding: 18px 150px;
+           
             z-index: 1000;
             border-bottom: 1px solid rgba(0, 0, 0, 0.107);
             border-top: 2px solid rgba(0, 0, 0, 0.107);
@@ -110,6 +110,7 @@ html {
         .logo {
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 12px;
             font-size: 1.35rem;
             font-weight: 700;
@@ -118,15 +119,15 @@ html {
         }
 
         .logo-icon {
-            width: 42px;
+            /* width: 42px;
             height: 42px;
-            background-color: var(--primary-accent);
-            color: white;
-            border-radius: 50%;
+            background-color: var(--primary-accent); */
+            color:#129675;
+            /* border-radius: 50%; */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         nav {
@@ -147,17 +148,19 @@ html {
         }
 
         .nav-links a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             text-decoration: none;
             color: var(--text-primary);
             font-weight: 500;
             font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            
         }
 
         .nav-links a.active {
                 color: var(--primary-accent) !important;
+                
             }
 
         .nav-links a:hover {
@@ -165,13 +168,13 @@ html {
         }
 
         /* Pillars Dropdown Menu */
-        .dropdown {
+        /* .dropdown {
             position: absolute;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
             background-color: var(--dropdown-bg);
-            border-radius: 12px;
+            border-radius: 20px;
             box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
             padding: 8px 0;
@@ -197,7 +200,8 @@ html {
 
         .dropdown a:hover {
             background-color: rgba(52, 179, 130, 0.1);
-        }
+            border-radius: 10px;
+        } */
 
         /* Action Controls */
         .header-actions {
@@ -219,6 +223,9 @@ html {
 
         /* Buttons matching the image design */
         .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 10px 22px;
             border-radius: 50px;
             font-weight: 600;
@@ -226,9 +233,6 @@ html {
             text-decoration: none;
             cursor: pointer;
             border: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
             transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
@@ -260,7 +264,7 @@ html {
             max-width: 900px;
             margin: 40px auto 0;
             text-align: center;
-             padding: 100px 20px 60px;
+            padding: 100px 20px 60px;
             
         }
 
@@ -311,10 +315,10 @@ html {
 
         /* --- Cards Section --- */
         .cards-container {
-            max-width: 980px;
-            margin: 0 auto 60px;
             display: grid;
             grid-template-columns: 1fr 1fr;
+            max-width: 980px;
+            margin: 0 auto 60px;
             gap: 24px;
             padding: 0 20px;
         }
@@ -395,11 +399,11 @@ html {
 
 /* Footer Main Grid Layout */
 .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 20px 40px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
 }
 
@@ -467,7 +471,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     text-decoration: none;
     transition: background-color 0.2s ease;
 }
@@ -476,15 +480,25 @@ html {
     background-color: var(--primary-accent);
 }
 
-/* App Store & Google Play Badges Container */
-.app-badges {
-    display: flex;
-    gap: 10px;
+.social-links a:nth-child(1):hover {
+     color: rgb(251, 249, 249);
+     background-color: rgba(3, 113, 238, 0.788);
 }
 
-.app-badges img {
-    height: 40px;
-    border-radius: 6px;
+.social-links a:nth-child(2):hover {
+     color: rgb(244, 239, 239);
+     background-color:black
+}
+
+.social-links a:nth-child(3):hover {
+     color: rgb(244, 239, 239);
+     background-color: rgb(216, 30, 111);
+}
+
+
+.social-links a:nth-child(4):hover {
+    background-color: rgb(244, 239, 239);
+    color: red
 }
 
 /* Bottom Footer Bar */
@@ -699,7 +713,7 @@ html {
 
         min-width: 38px;
 
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
 
@@ -1003,21 +1017,18 @@ html {
        ----------------------------------------------------- */
 
     .hero-buttons {
-        width: auto;
-
-        max-width: 350px;
-
-        margin: 0 auto 38px;
-
         display: flex;
-
         align-items: center;
-
         gap: 10px;
+        flex-wrap: wrap;
+        width: auto;
+        max-width: 350px;
+        margin: 0 auto 38px;
+        
     }
 
     .hero-buttons .btn {
-        width: 100%;
+        width: auto;
 
         min-height: 46px;
 
