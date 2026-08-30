@@ -8,7 +8,7 @@ html
             --bg-main: #E8F7EE;
             --card-bg: #FFFFFF;
             --text-primary: #0F172A;
-            --text-secondary: #475569;
+            --text-secondary: #1b2029;
             --primary-accent: #34B382;
             --primary-hover: #29936A;
             --icon-bg-green: #D2F4E3;
@@ -276,9 +276,10 @@ html
         }
 
         .transliteration {
-            font-style: italic;
+            font-style:italic;
             color: var(--text-primary);
             font-size: 0.98rem;
+            font-weight: 600;
             line-height: 1.6;
         }
 
@@ -286,6 +287,7 @@ html
             color: var(--text-secondary);
             font-size: 0.95rem;
             line-height: 1.6;
+            
         }
 
         .reference {
@@ -293,6 +295,7 @@ html
             color: var(--primary-accent);
             font-weight: 600;
             margin-top: 4px;
+            text-align: end;
         }
 
         /* Toast Popup for Copying */
