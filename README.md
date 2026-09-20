@@ -35,7 +35,7 @@ Make Islamic learning simple and accessible to everyone
 * **Clean & Responsive UI:** Designed to be comfortable to read across mobile devices, tablets, and desktop computers.
 
 ---
-**Who Is This Website For?**
+**For whom is this website intended?**
 
 Faith-Bridge is made for every Muslim.
 
@@ -49,7 +49,7 @@ Anyone who wants to build a stronger connection with their faith
 
 You do not need to be an expert to use Faith-Bridge.
 
-Start with the basics, learn at your own pace, and keep learning.
+Begin with the fundamentals, learn at the speed that suits you, and continue learning.
 
 
 ## Tech Stack
@@ -110,8 +110,13 @@ Start with the fundamentals, understand what you learn, put it into practice, an
 
 ## Getting Started
 
+**LIVE SITE**
+https://faisal-1638.github.io/Faith-Bridge/
+
+
 Follow these steps to run the project locally on your machine:
 
-1. **Clone the repository:**
+**Clone the repository:**
    ```bash
    git clone [https://github.com/Faisal-1638/Faith-Bridge.git](https://github.com/Faisal-1638/Faith-Bridge.git)
+   
